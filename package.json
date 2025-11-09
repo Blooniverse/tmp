@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js", # Ignored by Azure Static Web Apps
-    "build": "npm run build:blog"
+    "build": "npm run build:blog",
     "build:blog": "node scripts/build-blog.js"
   },
   "dependencies": {
