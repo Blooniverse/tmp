@@ -69,7 +69,7 @@
 
   function applyScenario(val){
     const notes = tr.scenarioNotes;
-    $( "scenarioNote").textContent = notes[val] || '';
+    $("scenarioNote").textContent = notes[val] || '';
     // update recommended defaults per scenario (matching original behavior)
     if(val==='productivity'){
       $("azAll").value = 24;
@@ -145,7 +145,7 @@
     if(st.lz!=null) $("on_lz").value = st.lz;
     if(st.lze!=null) $("on_lz_chk").checked = !!Number(st.lze);
     if(st.coe1!=null) $("on_coe").value = st.coe1;
-    if(st.coe1e!=null) $("on_coe").checked = !!Number(st.coe1e);
+    if(st.coe1e!=null) $("on_coe_chk").checked = !!Number(st.coe1e);
     if(st.ad!=null) $("on_adopt").value = st.ad;
     if(st.ade!=null) $("on_adopt_chk").checked = !!Number(st.ade);
     const map = {co365_chk:'co365', pp_chk:'pp', aoai_chk:'aoai', on_tenant_chk:'on_tenant', on_lz_chk:'on_lz', on_coe_chk:'on_coe', on_adopt_chk:'on_adopt'};
