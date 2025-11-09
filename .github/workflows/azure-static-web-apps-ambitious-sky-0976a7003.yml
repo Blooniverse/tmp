@@ -35,6 +35,7 @@ jobs:
           app_location: "."          # root of the repo (contains index.html, etc.)
           api_location: "api"           # Azure Functions API folder
           output_location: "."       # folder that now contains the generated blog HTML
+          app_build_command: "npm run build:blog"   # explicit command for ORYX (Azure's build engine) - should, actually, not be necessary
 
   # -------------------------------------------------
   # Close Pull Request (runs only when a PR is closed)
@@ -50,5 +51,6 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AMBITIOUS_SKY_0976A7003 }}
           action: "close"
+
 
 
