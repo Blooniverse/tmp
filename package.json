@@ -4,7 +4,8 @@
   "description": "Static Express site for 365cloud.ai with shareable URLs, quote mailto, WebSite & WebPage & BlogPosting JSON-LD, RDFa hints, hamburger nav + theme switch, flat-file blog & RSS.",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js", # Ignored by Azure Static Web Apps
+    "build": "npm run build:blog"
     "build:blog": "node scripts/build-blog.js"
   },
   "dependencies": {
