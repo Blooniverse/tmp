@@ -44,16 +44,16 @@
   
 <header class="container">
   <button id="menuBtn" aria-controls="drawer" aria-expanded="false" aria-label="Menü öffnen">☰</button>
-  <span class="pill">365cloud.ai — Engineering Digital Transformations</span>
+  <span class="pill">365cloud.ai — Engineering Digital Transformation</span>
   <h1>365Power durch Azure Cloud &amp; Azure AI</h1>
-  <h2>Beratung für Microsoft 365, Power Platform, Azure Cloud und Azure AI</h2>
+  <h2>Beratung für Microsoft 365, Power Platform, Azure Cloud & AI</h2>
 </header>
 
 <div id="scrim" class="scrim" hidden></div>
 <aside id="drawer" class="drawer" aria-hidden="true" aria-label="Seitenmenü">
   <nav class="menu" role="navigation">
     <a href="/de/">Startseite</a>
-    <a href="/de/project-power/">Projekt Power</a>
+    <a href="/de/project-power/">Umsetzung</a>
     <a href="/de/blog/">Blog</a>
     <a href="/de/imprint/">Impressum</a>
     <hr style="border:1px solid var(--line);border-width:0 0 1px;margin:.5rem 0" />
@@ -70,15 +70,15 @@
 
 <main class="container" style="padding:2rem 0;">
   <section>
-    <h3 style="margin:0 0 .6rem;">Schneller Kostenschätzer</h3>
+    <h3 style="margin:0 0 .6rem;">Kostenschätzer</h3>
     <div class="calc">
       <div class="grid-3">
         <div class="row">
-          <label for="scenario">Scenario preset</label>
+          <label for="scenario">Szenarios</label>
           <select id="scenario">
-            <option value="productivity" selected>Productivity-first</option>
-            <option value="dataai">Data/AI-first</option>
-            <option value="citdev">Citizen Dev boost</option>
+            <option value="productivity" selected>M365-Produktivität</option>
+            <option value="dataai">Azure & AI Power</option>
+            <option value="citdev">Citizen Developer Power</option>
           </select>
           <p class="note" id="scenarioNote"></p>
         </div>
@@ -91,7 +91,7 @@
           <select id="license">
             <option value="36" selected>Microsoft 365 E3 — CHF 36</option>
             <option value="57">Microsoft 365 E5 — CHF 57</option>
-            <option value="23">Microsoft 365 Business Premium — CHF 23</option>
+            <option value="23">Microsoft 365 BP — CHF 23</option>
           </select>
         </div>
       </div>
@@ -114,7 +114,7 @@
             <input id="on_coe" type="number" step="100" value="4000" disabled />
           </div>
           <div class="row">
-            <label class="inline"><input type="checkbox" id="on_adopt_chk"> Adoption & training</label>
+            <label class="inline"><input type="checkbox" id="on_adopt_chk"> Adoption & Training</label>
             <input id="on_adopt" type="number" step="100" value="3000" disabled />
           </div>
         </div>
@@ -122,7 +122,7 @@
       </fieldset>
 
       <fieldset>
-        <legend>Recurring (per-user / month)</legend>
+        <legend>Wiederkehrend (Benutzer-Monat)</legend>
         <div class="grid-2">
           <div class="row">
             <label for="m365">(From license)</label>
@@ -136,31 +136,31 @@
       </fieldset>
 
       <fieldset>
-        <legend>Optional add-ons (per-user / month)</legend>
+        <legend>Optionen (Benutzer-Monat)</legend>
         <div class="grid-3">
           <div class="row">
-            <label class="inline"><input type="checkbox" id="co365_chk" checked> Copilot for Microsoft 365</label>
+            <label class="inline"><input type="checkbox" id="co365_chk" checked> Copilot für Microsoft 365</label>
             <input id="co365" type="number" step="1" value="30" />
           </div>
           <div class="row">
-            <label class="inline"><input type="checkbox" id="pp_chk"> Power Platform premium</label>
+            <label class="inline"><input type="checkbox" id="pp_chk"> Power Platform Premium</label>
             <input id="pp" type="number" step="1" value="18" disabled />
           </div>
           <div class="row">
-            <label class="inline"><input type="checkbox" id="aoai_chk"> Azure OpenAI usage (avg)</label>
+            <label class="inline"><input type="checkbox" id="aoai_chk"> Azure OpenAI</label>
             <input id="aoai" type="number" step="1" value="10" disabled />
           </div>
         </div>
       </fieldset>
 
       <div class="out mono" id="out">
-        <div class="total"><strong>Total monthly (recurring):</strong> <span id="totalMonthly"></span></div>
-        <div><strong>Total yearly (recurring):</strong> <span id="totalYearly"></span></div>
-        <div class="muted">Per-user monthly (recurring): <span id="perUser"></span></div>
-        <div style="margin-top:.6rem;"><strong>One-time services total:</strong> <span id="onetimeTotal"></span></div>
+        <div class="total"><strong>Total Monat (wiederkehrend):</strong> <span id="totalMonthly"></span></div>
+        <div><strong>Total Jahr (wiederkehrend):</strong> <span id="totalYearly"></span></div>
+        <div class="muted">Pro Benutzer Monat (wiederkehrend): <span id="perUser"></span></div>
+        <div style="margin-top:.6rem;"><strong>Total One-time Services:</strong> <span id="onetimeTotal"></span></div>
         <div class="actions">
-          <button class="btn" id="copyLink">Copy shareable link</button>
-          <button class="btn secondary" id="askQuote">Ask for quote</button>
+          <button class="btn" id="copyLink">Konfiguration teilen</button>
+          <button class="btn secondary" id="askQuote">Angebot erfragen</button>
           <span class="toast" id="toast" role="status" aria-live="polite"></span>
         </div>
 
@@ -168,11 +168,11 @@
           <form id="quoteForm">
             <div class="form-grid">
               <div class="row">
-                <label for="q_first">First name</label>
+                <label for="q_first">Vorname</label>
                 <input type="text" id="q_first" required />
               </div>
               <div class="row">
-                <label for="q_last">Second name</label>
+                <label for="q_last">Nachname</label>
                 <input type="text" id="q_last" required />
               </div>
               <div class="row" style="grid-column:1 / span 2;">
@@ -181,8 +181,7 @@
               </div>
             </div>
             <div class="form-actions">
-              <button class="btn" type="submit">Submit & prepare email</button>
-              <span class="note">Your email app will open with all details prefilled. No data is stored server-side.</span>
+              <button class="btn" type="submit">Anfrage absenden (via E-Mail)</button>
             </div>
           </form>
         </div>
