@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "redirect": "https://365cloud.ai",
+      "statusCode": 301,
+      "conditions": {
+        "host": "www.365cloud.ai"
+      }
+    }
+  ]
+}
