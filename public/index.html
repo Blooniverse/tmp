@@ -135,21 +135,21 @@
         <div class="grid-2">
           <div class="row">
             <label class="inline"><input type="checkbox" id="on_tenant_chk" checked> M365 Secure Foundations</label>
-            <input id="on_tenant" type="number" step="100" value="4500" />
+            <input id="on_tenant" type="number" step="0.01" value="4500" readonly />
           </div>
           <div class="row">
             <label class="inline"><input type="checkbox" id="on_lz_chk"> Azure Landing Zone & IaC</label>
-            <input id="on_lz" type="number" step="100" value="6500" disabled />
+            <input id="on_lz" type="number" step="0.01" value="6500" readonly disabled />
           </div>
         </div>
         <div class="grid-2">
           <div class="row">
             <label class="inline"><input type="checkbox" id="on_coe_chk"> Power Platform CoE</label>
-            <input id="on_coe" type="number" step="100" value="4000" disabled />
+            <input id="on_coe" type="number" step="0.01" value="4000" readonly disabled />
           </div>
           <div class="row">
             <label class="inline"><input type="checkbox" id="on_adopt_chk"> Adoption & Training</label>
-            <input id="on_adopt" type="number" step="100" value="3000" disabled />
+            <input id="on_adopt" type="number" step="0.01" value="3000" readonly disabled />
           </div>
         </div>
         <p class="note">Note ...</p>
@@ -164,7 +164,7 @@
           </div>
           <div class="row">
             <label for="azAll">Azure-Services</label>
-            <input id="azAll" type="number" step="0.01" value="28" />
+            <input id="azAll" type="number" step="0.01" value="28" readonly />
           </div>
         </div>
       </fieldset>
@@ -174,15 +174,15 @@
         <div class="grid-3">
           <div class="row">
             <label class="inline"><input type="checkbox" id="co365_chk" checked> Copilot für Microsoft 365</label>
-            <input id="co365" type="number" step="0.01" value="30" />
+            <input id="co365" type="number" step="0.01" value="30" readonly />
           </div>
           <div class="row">
             <label class="inline"><input type="checkbox" id="pp_chk"> Power Platform Premium</label>
-            <input id="pp" type="number" step="0.01" value="18" disabled />
+            <input id="pp" type="number" step="0.01" value="18" readonly disabled />
           </div>
           <div class="row">
             <label class="inline"><input type="checkbox" id="aoai_chk"> Azure OpenAI</label>
-            <input id="aoai" type="number" step="0.01" value="10" disabled />
+            <input id="aoai" type="number" step="0.01" value="10" readonly disabled />
           </div>
         </div>
       </fieldset>
