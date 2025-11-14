@@ -49,6 +49,7 @@ legend{color:#cfe8ff;color:var(--fg);opacity:.9;padding:0 .25rem}
 .inline{display:flex;align-items:center;gap:.5rem}
 .inline input[type=checkbox]{transform:scale(1.2)}
 .note{font-size:.9rem;color:#9da7b3;color:var(--muted)}
+#scenarioNote {display:none}
 .actions{display:flex;gap:.5rem;align-items:center;margin:.5rem 0 0;flex-wrap:wrap}
 .btn{background:var(--pill-bg);color:var(--pill-fg);border:1px solid color-mix(in srgb,var(--pill-bg) 60%,#000 40%);padding:.45rem .6rem;border-radius:.4rem;cursor:pointer}
 .btn.secondary{background:color-mix(in srgb,var(--pill-bg) 70%,#000 30%)}
