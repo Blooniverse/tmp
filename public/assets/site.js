@@ -31,8 +31,8 @@
 
   // Language handling: simple buttons with data-lang attribute inside drawer
   function currentLangDefault(){
-    // default to 'de' if no saved value
-    return localStorage.getItem(STORAGE_LANG) || 'de';
+    // do not default to 'de' if no saved value — return only explicit saved preference
+    return localStorage.getItem(STORAGE_LANG);
   }
   function setLang(lang){
     if(!lang) return;
