@@ -16,9 +16,9 @@
   const T = {
     en: {
       scenarioNotes: {
-        productivity: 'M365 Focus',
-        citdev: 'Powerplatform Focus',
-        dataai: 'Azure Focus',
+        microsoft_m365: 'M365 Focus',
+        microsoft_powerplatform: 'Powerplatform Focus',
+        microsoft_azure: 'Azure Focus',
       },
       copySuccess: 'Link copied to clipboard',
       copyFail: 'Copy failed — copy the URL manually',
@@ -27,8 +27,8 @@
       askQuote: 'Ask for quote',
       copyLink: 'Copy shareable link',
       licenseLabels: {
-        '57': 'Microsoft 365 E5',
-        '23': 'Microsoft 365 BP',
+        'microsoft365_license_e5': 'Microsoft 365 E5',
+        'microsoft365_license_bp': 'Microsoft 365 BP',
         default: 'Microsoft 365 E3'
       },
       quoteSubject: (ppl, license) => `Quote request — ${ppl} ppl — ${license}`,
@@ -36,9 +36,9 @@
     },
     de: {
       scenarioNotes: {
-        productivity: 'M365-Fokus',
-        citdev: 'Powerplatform-Fokus',
-        dataai: 'Azure-Fokus',
+        microsoft_m365: 'M365-Fokus',
+        microsoft_powerplatform: 'Powerplatform-Fokus',
+        microsoft_azure: 'Azure-Fokus',
       },
       copySuccess: 'Link in Zwischenablage kopiert',
       copyFail: 'Kopieren fehlgeschlagen — URL bitte manuell kopieren',
@@ -47,8 +47,8 @@
       askQuote: 'Angebot anfragen',
       copyLink: 'Link kopieren',
       licenseLabels: {
-        '57': 'Microsoft 365 E5',
-        '23': 'Microsoft 365 BP',
+        'microsoft365_license_e5': 'Microsoft 365 E5',
+        'microsoft365_license_bp': 'Microsoft 365 BP',
         default: 'Microsoft 365 E3'
       },
       quoteSubject: (ppl, license) => `Angebotsanfrage — ${ppl} Pers. — ${license}`,
@@ -57,6 +57,15 @@
   };
 
   const tr = T[LANG] || T.en;
+
+  // Map license token to numeric price (CHF/user/mo)
+  function getLicensePrice(token){
+    switch(String(token)){
+      case 'microsoft365_license_e5': return 57;
+      case 'microsoft365_license_bp': return 23;
+      default: return 36; // e3
+    }
+  }
 
   // Bind toggles (enable/disable paired input)
   function bindToggle(chkId, inputId){
@@ -71,7 +80,7 @@
     const notes = tr.scenarioNotes;
     $("scenarioNote").textContent = notes[val] || '';
     // update recommended defaults per scenario (matching original behavior)
-    if(val==='productivity'){
+    if(val==='microsoft_m365'){
       $("azAll").value = 24;
       $("co365_chk").checked = true;  $("co365").value = 30;
       $("pp_chk").checked = false;    $("pp").value = 18;
@@ -81,7 +90,7 @@
       $("on_coe_chk").checked = false; $("on_coe").value = 4000;
       $("on_adopt_chk").checked = true; $("on_adopt").value = 3000;
     }
-    if(val==='dataai'){
+    if(val==='microsoft_azure'){
       $("azAll").value = 38;
       $("co365_chk").checked = true;  $("co365").value = 30;
       $("pp_chk").checked = false;    $("pp").value = 18;
@@ -91,7 +100,7 @@
       $("on_coe_chk").checked = false; $("on_coe").value = 4000;
       $("on_adopt_chk").checked = true; $("on_adopt").value = 4000;
     }
-    if(val==='citdev'){
+    if(val==='microsoft_powerplatform'){
       $("azAll").value = 28;
       $("co365_chk").checked = true;  $("co365").value = 30;
       $("pp_chk").checked = true;     $("pp").value = 18;
@@ -115,7 +124,7 @@
     return {
       s: $("scenario").value,
       ppl: Number($("people").value),
-      lic: Number($("license").value),
+      lic: $("license").value,
       az: Number($("azAll").value),
       co: Number($("co365").value), coe: Number($("co365_chk").checked),
       ppv: Number($("pp").value), ppe: Number($("pp_chk").checked),
@@ -132,7 +141,7 @@
     if(st.s) $("scenario").value = st.s;
     if(st.ppl) $("people").value = st.ppl; else $("people").value = 1;
     if(st.lic) $("license").value = st.lic;
-    $("m365").value = Number($("license").value).toFixed(2);
+    $("m365").value = getLicensePrice($("license").value).toFixed(2);
     if(st.az!=null) $("azAll").value = st.az;
     if(st.co!=null) $("co365").value = st.co;
     if(st.coe!=null) $("co365_chk").checked = !!Number(st.coe);
@@ -167,7 +176,7 @@
       q.forEach((v,k)=>{ st[k]=isNaN(Number(v))? v: Number(v); });
       setState(st);
     } else {
-      $("people").value = 1; applyScenario('productivity');
+      $("people").value = 1; applyScenario('microsoft_m365');
     }
     compute();
     saveToUrl();
@@ -176,7 +185,7 @@
   function compute(){
     const people = Number($("people").value);
     $("peopleLabel").textContent = people;
-    const m365 = Number($("license").value);
+    const m365 = getLicensePrice($("license").value);
     $("m365").value = m365.toFixed(2);
     const azAll = Number($("azAll").value);
 
@@ -240,8 +249,8 @@
   }
 
   function getLicenseLabel(v){
-    if(String(v)==='57') return tr.licenseLabels['57'];
-    if(String(v)==='23') return tr.licenseLabels['23'];
+    if(String(v)==='microsoft365_license_e5') return tr.licenseLabels['microsoft365_license_e5'];
+    if(String(v)==='microsoft365_license_bp') return tr.licenseLabels['microsoft365_license_bp'];
     return tr.licenseLabels.default;
   }
 
@@ -257,6 +266,7 @@
       const st = getState();
       const { totalMonthly, totalYearly, perUser, oneTimeTotal } = compute();
       const licenseLabel = getLicenseLabel(st.lic);
+      const licensePrice = getLicensePrice(st.lic);
 
       const lines = [];
       if(LANG === 'de') lines.push('Anfrage aus dem 365cloud.ai Schätzer'); else lines.push('Quote request from 365cloud.ai estimator');
@@ -267,7 +277,7 @@
       lines.push((LANG === 'de' ? 'Konfiguration:' : 'Configuration:'));
       lines.push((LANG === 'de' ? `Szenario: ${st.s}` : `Scenario: ${st.s}`));
       lines.push((LANG === 'de' ? `Personen: ${st.ppl}` : `People: ${st.ppl}`));
-      lines.push((LANG === 'de' ? `Lizenz: ${licenseLabel} (CHF ${st.lic}/user/mo)` : `License: ${licenseLabel} (CHF ${st.lic}/user/mo)`));
+      lines.push((LANG === 'de' ? `Lizenz: ${licenseLabel} (CHF ${licensePrice}/user/mo)` : `License: ${licenseLabel} (CHF ${licensePrice}/user/mo)`));
       lines.push((LANG === 'de' ? `Azure inkl. Betrieb & Security: CHF ${st.az}/user/mo` : `Azure incl. ops & security: CHF ${st.az}/user/mo`));
       lines.push((LANG === 'de' ? 'Add-ons:' : 'Add-ons:'));
       lines.push((LANG === 'de' ? `  Copilot für M365: ${st.coe? 'AN' : 'aus'} (CHF ${st.co}/user/mo)` : `  Copilot for M365: ${st.coe? 'ON' : 'off'} (CHF ${st.co}/user/mo)`));
