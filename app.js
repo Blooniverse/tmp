@@ -11,9 +11,8 @@ app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] })
 app.get('/healthz', (_req, res) => res.type('text').send('ok'));
 
 // Redirect root to German (default)
-app.get('/', (_req, res) => res.redirect(302, '/de/'));
-
+// app.get('/', (_req, res) => res.redirect(302, '/de/'));
 // SPA-like fallback: prefer German index as default fallback
-app.use((_req, res) => res.sendFile(path.join(__dirname, 'public', 'de', 'index.html')));
+// app.use((_req, res) => res.sendFile(path.join(__dirname, 'public', 'de', 'index.html')));
 
 app.listen(PORT, () => console.log(`✅ 365cloud.ai running at http://localhost:${PORT}`));
