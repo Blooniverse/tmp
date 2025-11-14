@@ -1,6 +1,6 @@
 (function(){
   const $ = (id) => document.getElementById(id);
-  const CHF = new Intl.NumberFormat('de-CH',{style:'currency',currency:'CHF',maximumFractionDigits:0});
+  const CHF = new Intl.NumberFormat('de-CH',{style:'currency',currency:'CHF',maximumFractionDigits:2});
   const fmt = (n) => CHF.format(Math.round(n));
 
   // Determine language from path or saved preference; default to 'de' as requested.
@@ -68,9 +68,9 @@
 
   function applyScenario(val){
     if(val==='microsoft_m365'){
-      $("azAll").value = 24;
+      $("azAll").value = 24.00;
       $("co365_chk").checked = true;  $("co365").value = 30;
-      $("pp_chk").checked = false;    $("pp").value = 18;
+      $("pp_chk").checked = false;    $("pp").value = fmt(18);
       $("aoai_chk").checked = false;  $("aoai").value = 8;
       $("on_tenant_chk").checked = true; $("on_tenant").value = 4500;
       $("on_lz_chk").checked = false; $("on_lz").value = 6500;
