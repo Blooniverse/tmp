@@ -34,7 +34,7 @@ body{
 }
 
 /* Layout */
-.container {align: center; }
+.container { margin: 0 auto; }
 header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); padding:2.25rem 1rem; }
 footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 60%); }
 /* header div.container */
