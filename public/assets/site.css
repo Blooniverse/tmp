@@ -35,9 +35,9 @@ body{
 
 /* Layout */
 .container{max-width:1024px;margin:0 auto;padding:0 1rem}
-header,footer{background:var(--card)}
-header.container{padding:2.25rem 1rem;border-bottom:1px solid var(--border);position:relative}
-footer.container{border-top:1px solid var(--border);padding:1rem;font-size:.95rem;color:var(--muted)}
+header,footer{background:var(--bg)}
+header div.container{padding:2.25rem 1rem;border-bottom:1px solid var(--border);position:relative}
+footer div.container{border-top:1px solid var(--border);padding:1rem;font-size:.95rem;color:var(--muted)}
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:.85rem;margin-bottom:1rem}
 h1{margin:0 0 .5rem;font-size:2rem}
 h2{margin:.25rem 0 0;font-weight:500;color:var(--muted)}
