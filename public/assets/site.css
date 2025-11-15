@@ -33,7 +33,7 @@ body{
 }
 
 /* Layout */
-.container {max-width: 80vw; margin: 0 auto; padding: 0 1rem; }
+.container {max-width: 1300px; margin: 0 auto; padding: 0 1rem; }
 header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); padding-bottom: 0.5rem; }
 footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 60%); font-size:.95rem; color:var(--muted); }
 /* header div.container{padding:2.25rem 1rem;border-bottom:1px solid var(--border);position:relative} */
