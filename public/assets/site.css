@@ -42,12 +42,15 @@ h1{margin:0 0 .5rem;font-size:2rem}
 h2{margin:.25rem 0 0;font-weight:500;color:var(--muted)}
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
-section{background:var(--card);padding:1.25rem;border-radius:.6rem;border:1px solid #1c2330;border-color:var(--border)}
 
 main {
   background: linear-gradient(180deg,color-mix(in srgb,var(--brand) 30%,transparent 70%),transparent 70%);
   border-color:color-mix(in srgb,var(--brand) 35%,var(--line) 65%);
   box-shadow:0 6px 18px rgba(0,0,0,0.25);
+  padding:1.25rem;
+  border-radius:.6rem;
+  border:1px solid #1c2330;
+  border-color:var(--border)
 }
 input#people, select#license {
   background: var(--fg);
