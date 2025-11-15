@@ -22,8 +22,8 @@ html,body{height:100%}
 
 body{
   margin: 0;
-  font-family: system-ui, 'Aptos Display', Aptos, 'Segoe UI Symbol', 'Segoe UI', Arial, 'Liberation Sans', Ubuntu, Cantarell, sans-serif;
-  /* Consolas, 'Ubuntu Sans Mono', 'Noto Mono', 'Courier New', monospace; */
+  font-family: system-ui, sans-serif;
+  /* monospace, Consolas */
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
