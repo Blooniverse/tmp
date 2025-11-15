@@ -41,7 +41,6 @@ label{color:#cbd6e0;color:var(--muted);font-size:.95rem}
 input[type=range]{width:100%}
 input[type=number],input[type=email],input[type=text],select{width:100%;padding:.45rem .5rem;background:#0b1220;background:color-mix(in srgb,var(--bg) 80%,#000 20%);color:var(--fg);border:1px solid color-mix(in srgb,var(--line) 30%,#000 70%)}
 .out{background:#0b1220;background:color-mix(in srgb,var(--bg) 80%,#000 20%);border:1px solid var(--line);border-radius:.6rem;padding:1rem}
-.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .muted{color:var(--muted)}
 .total{font-size:1.35rem;color:#eaffff;color:var(--fg)}
 fieldset{border:1px solid var(--line);border-radius:.6rem;padding:1rem}
@@ -124,7 +123,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
 
 .total-item {
   font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .total-item:last-child {
@@ -132,7 +131,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
 }
 
 .total-monthly {
-  color: #AF43CD;
+  color: #cccccc;
 }
 
 /* Accordion styles for fieldsets */
