@@ -195,7 +195,6 @@
 
     $("totalMonthly").textContent = fmt(totalMonthly);
     $("totalYearly").textContent = fmt(totalYearly);
-    $("perUser").textContent = fmt(perUser);
     $("onetimeTotal").textContent = fmt(oneTimeTotal);
 
     return { totalMonthly, totalYearly, perUser, oneTimeTotal };
@@ -297,6 +296,31 @@
     const s = $("scenario");
     if(s) applyScenario(s.value);
     loadFromUrl();
+
+    // Initialize accordion functionality for fieldsets
+    const fieldsets = document.querySelectorAll('fieldset');
+    fieldsets.forEach((fieldset, index) => {
+      const legend = fieldset.querySelector('legend');
+      if (legend) {
+        // Start with all fieldsets collapsed
+        fieldset.classList.add('collapsed');
+        
+        legend.addEventListener('click', (e) => {
+          fieldset.classList.toggle('collapsed');
+        });
+      }
+    });
+
+    // Move actions div above quotePanel
+    const actions = document.querySelector('.actions');
+    const quotePanel = $('quotePanel');
+    const outDiv = $('out');
+    if (actions && quotePanel && outDiv) {
+      // Remove actions from its current position
+      actions.remove();
+      // Insert it before quotePanel
+      outDiv.insertBefore(actions, quotePanel);
+    }
   })();
 
 })();
