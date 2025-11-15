@@ -1,6 +1,5 @@
 /* Base themes */
 :root{
-   /* 0e1117 */
   --bg:hsla(202,80%,15%, 1); --fg:#e6edf3; --muted:#9da7b3; --brand:#61dafb; --card:#151a23; --accent:#00c2ff;
   --border:#222a35; --line:#263044; --pill-bg:#0b3d4b; --pill-fg:#c7f1ff;
 }
@@ -36,7 +35,7 @@ body{
 /* Layout */
 .container {max-width:1024px; margin:0 auto; padding:0 1rem; }
 header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); }
-footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); }
+footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 60%); }
 /* header div.container{padding:2.25rem 1rem;border-bottom:1px solid var(--border);position:relative} */
 /* font-size:.95rem;color:var(--muted) */
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:.85rem;margin-bottom:1rem}
