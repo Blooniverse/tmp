@@ -53,7 +53,7 @@ main {
   border-color: var(--border)
 }
 select#scenario, select#license {
-  background: var(--fg);
+  background: color-mix(in srgb, var(--fg) 80%, transparent 20%);
   color: var(--bg);
   border-color: var(--line);
 }
