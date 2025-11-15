@@ -57,7 +57,7 @@ legend{color:#cfe8ff;color:var(--fg);opacity:.9;padding:0 .25rem}
 .toast{font-size:.9rem;color:#9de2ff}
 
 /* One-time highlight */
-fieldset.one-time{background:linear-gradient(180deg,color-mix(in srgb,var(--brand) 30%,transparent 70%),transparent 70%);border-color:color-mix(in srgb,var(--brand) 35%,var(--line) 65%);box-shadow:0 6px 18px rgba(0,0,0,0.25)}
+fieldset.service-accordion{background:linear-gradient(180deg,color-mix(in srgb,var(--brand) 30%,transparent 70%),transparent 70%);border-color:color-mix(in srgb,var(--brand) 35%,var(--line) 65%);box-shadow:0 6px 18px rgba(0,0,0,0.25)}
 
 /* Quote panel */
 #quotePanel{margin-top:1rem;max-height:0;overflow:hidden;transition:max-height 0.3s ease}
