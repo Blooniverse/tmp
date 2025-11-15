@@ -22,6 +22,7 @@ html,body{height:100%}
 
 body{
   margin: 0;
+  padding: 0;
   font-family: system-ui, sans-serif;
   /* monospace, Consolas */
   font-weight: 400;
@@ -33,10 +34,10 @@ body{
 }
 
 /* Layout */
-.container {max-width:1024px; margin:0 auto; padding:0 1rem; }
-header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); }
+/* .container {} */
+header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); padding:2.25rem 1rem; }
 footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 60%); }
-/* header div.container{padding:2.25rem 1rem;border-bottom:1px solid var(--border);position:relative} */
+/* header div.container */
 /* font-size:.95rem;color:var(--muted) */
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:.85rem;margin-bottom:1rem}
 h1{margin:0 0 .5rem;font-size:2rem}
@@ -51,7 +52,8 @@ main {
   padding: 1.25rem;
   border-radius: .6rem;
   border: 1px solid #1c2330;
-  border-color: var(--border)
+  border-color: var(--border);
+  max-width:1024px;
 }
 select#scenario, select#license {
   background: color-mix(in srgb, var(--fg) 80%, transparent 20%);
