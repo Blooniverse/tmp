@@ -36,7 +36,7 @@ body{
 .container {max-width: 1300px; margin: 0 auto; padding: 0 1rem; }
 header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); padding-bottom: 0.5rem; }
 footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 60%); font-size:.95rem; color:var(--muted); }
-header div.container{border-bottom:2px dotted #777777;position:relative}
+header div.container{border-bottom: 2px dotted #777777; }
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:.85rem;margin-bottom:1rem}
 h1{margin:0 0 .5rem;font-size:2rem}
 h2{margin:.25rem 0 0;font-weight:500;color:var(--muted)}
@@ -68,11 +68,10 @@ input[type=range]{width:100%}
 input[type=number],input[type=email],input[type=text],select{width:100%;padding:.45rem .5rem;background:#0b1220;background:color-mix(in srgb,var(--bg) 80%,#000 20%);color:var(--fg);border:1px solid color-mix(in srgb,var(--line) 30%,#000 70%)}
 .out{background:#0b1220;background:color-mix(in srgb,var(--bg) 80%,#000 20%);border:1px solid var(--line);border-radius:.6rem;padding:1rem}
 .muted{color:var(--muted)}
-.total{font-size:1.35rem;color:#eaffff;color:var(--fg)}
 fieldset{border:1px solid var(--line);border-radius:.6rem;padding:1rem}
 legend{color:#cfe8ff;color:var(--fg);opacity:.9;padding:0 .25rem}
-.inline{display:flex;align-items:center;gap:.5rem}
-.inline input[type=checkbox]{transform:scale(1.2)}
+label.inline{display:flex;align-items:center;gap:.5rem}
+label.inline input[type=checkbox]{transform:scale(1.2)}
 .note{font-size:.9rem;color:#9da7b3;color:var(--muted)}
 #scenarioNote {display:none}
 .actions{display:flex;gap:.5rem;align-items:center;margin:.5rem 0 0;flex-wrap:wrap}
@@ -81,6 +80,44 @@ legend{color:#cfe8ff;color:var(--fg);opacity:.9;padding:0 .25rem}
 .btn:disabled{opacity:.6;cursor:not-allowed}
 .toast{font-size:.9rem;color:#9de2ff}
 
+/* Totals section styling */
+.totals-section {
+  background: color-mix(in srgb, var(--bg) 80%, #000 20%);
+  border: 1px dotted #777777;
+  border-radius: .6rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.total-item {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+.total-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Accordion styles for fieldsets */
+fieldset {
+  position: relative;
+}
+fieldset legend {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+fieldset legend::after {
+  content: '▼';
+  position: absolute;
+  right: 0;
+  transition: transform 0.2s ease;
+}
+fieldset.collapsed legend::after {
+  transform: rotate(-90deg);
+}
+fieldset.collapsed > :not(legend) {
+  display: none;
+}
 /* Fieldset with accordion */
 fieldset.service-accordion{background:linear-gradient(180deg,color-mix(in srgb,var(--brand) 30%,transparent 70%),transparent 70%);border-color:color-mix(in srgb,var(--brand) 35%,var(--line) 65%);box-shadow:0 6px 18px rgba(0,0,0,0.25)}
 
@@ -134,53 +171,5 @@ button:disabled{opacity:.6;cursor:not-allowed}
 .muted-small { margin-top: .5rem; font-size: .85rem; }
 .toast-fixed { position: fixed; bottom: 2rem; right: 2rem; padding: 1rem; background: #333; color: #fff; border-radius: 8px; display: none; }
 .lang-block { margin-top: .5rem; }
-/** .aside-padding { padding: 1rem 0 2rem; } **/
 
-/* Totals section styling */
-.totals-section {
-  background: color-mix(in srgb, var(--bg) 80%, #000 20%);
-  border: 1px solid var(--line);
-  border-radius: .6rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
 
-.total-item {
-  font-size: 1.3rem;
-  margin-bottom: 0.4rem;
-}
-
-.total-item:last-child {
-  margin-bottom: 0;
-}
-
-.total-monthly {
-  color: #cccccc;
-}
-
-/* Accordion styles for fieldsets */
-fieldset {
-  position: relative;
-}
-
-fieldset legend {
-  cursor: pointer;
-  user-select: none;
-  position: relative;
-  padding-right: 1.5rem;
-}
-
-fieldset legend::after {
-  content: '▼';
-  position: absolute;
-  right: 0;
-  transition: transform 0.2s ease;
-}
-
-fieldset.collapsed legend::after {
-  transform: rotate(-90deg);
-}
-
-fieldset.collapsed > :not(legend) {
-  display: none;
-}
