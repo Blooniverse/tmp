@@ -89,7 +89,7 @@ input[type=number], input[type=email], input[type=text], select {
 /* Totals */
 .totals-section {
   background: hsla(0,0%,0%, 0.2);
-  border: 1px dotted #777777;
+  border: 1px dotted var(--line);
   border-style: dotted solid double solid;
   border-radius: .6rem;
   padding: 0.5rem;
