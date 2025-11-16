@@ -44,7 +44,7 @@ a:hover{text-decoration:underline}
 
 main {
   /* background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 50%);*/
-  background: hsla(202,0%,0%, 0.1);
+  background: hsla(202,0%,0%, 0.2);
   border-color: color-mix(in srgb, var(--brand) 35%, var(--line) 65%);
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   padding: 1rem;
