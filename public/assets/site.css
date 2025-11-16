@@ -50,10 +50,11 @@ main {
   border-radius: .6rem;
   border: 1px dotted var(--line);
 }
-select#scenario, select#license {
+select#scenario, select#license, select > option {
   background: color-mix(in hsl, var(--fg) 100%, transparent 90%);
   color: var(--bg);
   border-color: var(--line);
+  font-weight: 500;
 }
 
 /* Calculator */
