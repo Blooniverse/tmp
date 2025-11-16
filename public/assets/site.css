@@ -156,7 +156,7 @@ label.inline input[type=checkbox]{transform:scale(1.3)}
 button{background:var(--pill-bg);color:var(--pill-fg);border:1px solid color-mix(in srgb,var(--pill-bg) 60%,#000000 40%);padding:.6rem 1rem;border-radius:.4rem;cursor:pointer;font-size:1rem}
 button:hover{opacity:0.9}
 button:disabled{opacity:.6;cursor:not-allowed}
-button#askQuote {background: var(--accent); }
+button#askQuote, button[type=submit] {background: var(--accent); }
 
 /* Hamburger + drawer */
 #menuBtn{position:absolute;top:1rem;right:1rem;background:transparent;border:1px solid var(--line);color:var(--fg);padding:.4rem .5rem;border-radius:.4rem;cursor:pointer}
