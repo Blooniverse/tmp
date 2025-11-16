@@ -1,9 +1,11 @@
-/* Base themes */
+/* Theme: dark  */
+/* 202° base colour + 194° harmonious  */
+/* 52° & 352° split-complementary contrast via Colorharmonygen.com  */
 :root {
-  --bg:hsla(202,80%,15%, 1); --fg:hsla(202,40%,95%, 1); --muted:hsla(202,10%,70%, 1); --brand:hsla(194,95%,70%, 1); --card:hsla(202,40%,20%, 0.5); --accent:hsla(350,100%,25%, 1);
+  --bg:hsla(202,80%,15%, 1); --fg:hsla(202,40%,95%, 1); --muted:hsla(202,10%,70%, 1); --brand:hsla(194,95%,70%, 1); --card:hsla(52,100%,20%, 0.7); --accent:hsla(352,100%,20%, 1);
   --line:hsla(202,50%,40%, 1); --pill-bg:hsla(194,75%,20%); --pill-fg:hsla(194,100%,90%, 1);
 }
-/* Light theme variables */
+/* Theme: light */
 :root[data-theme="light"] {
   --bg:#f7f9fc; --fg:#0b1220; --muted:#5b6571; --brand:#0068b8; --card:#ffffff; --accent:#0066cc;
   --line:#cbd6e0; --pill-bg:#e6f4ff; --pill-fg:#003b73;
@@ -83,7 +85,7 @@ input[type=number], input[type=email], input[type=text], select {
 #scenarioNote {display:none}
 .actions{display:flex;gap:.5rem;align-items:center;margin:.5rem 0 0;flex-wrap:wrap}
 button.btn{background:var(--pill-bg);color:var(--pill-fg);border:1px solid color-mix(in srgb,var(--pill-bg) 60%,#000 40%);padding:.45rem .6rem;border-radius:.4rem;cursor:pointer}
-button.btn.secondary{background:color-mix(in srgb,var(--pill-bg) 70%,#000 30%)}
+button.btn.secondary { background: var(--accent); }
 button.btn:disabled{opacity:.6;cursor:not-allowed}
 .toast{font-size:.9rem;color:#9de2ff}
 
