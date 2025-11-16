@@ -170,15 +170,12 @@ button:disabled{opacity:.6;cursor:not-allowed}
   border-bottom: 1px solid var(--line);
   margin: .5rem 0;
 }
-.mt-05 { margin-top: .5rem; }
 .h3-tight { margin: 0 0 .6rem; }
-.h2-subtle { margin: .25rem 0 0; font-weight: 500; color: var(--muted); }
 .card { margin-top: 2rem; padding: 1rem; background: var(--card-bg, #f9f9f9); border-radius: 8px; }
 .actions-row { margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .actions-row .btn { flex: 1; min-width: 200px; }
 .form-card { padding: 1rem; background: var(--card-bg, #f9f9f9); border-radius: 8px; }
 .muted-small { margin-top: .5rem; font-size: .85rem; }
-.toast-fixed { position: fixed; bottom: 2rem; right: 2rem; padding: 1rem; background: #333; color: #fff; border-radius: 8px; display: none; }
 .lang-block { margin-top: .5rem; }
 
 
