@@ -2,7 +2,7 @@
 /* 202° base colour + 194° harmonious  */
 /* 52° & 352° split-complementary contrast via Colorharmonygen.com  */
 :root {
-  --bg:hsla(202,80%,15%, 1); --fg:hsla(202,40%,95%, 1); --muted:hsla(202,10%,70%, 1); --brand:hsla(194,95%,70%, 1); --card:hsla(322,100%,20%, 0.5); --accent:hsla(352,100%,20%, 1);
+  --bg:hsla(202,80%,15%, 1); --fg:hsla(202,40%,95%, 1); --muted:hsla(202,10%,70%, 1); --brand:hsla(194,95%,70%, 1); --card:hsla(322,100%,20%, 0.5); --accent:hsla(352,100%,20%, 0.8);
   --line:hsla(202,50%,40%, 1); --pill-bg:hsla(194,75%,20%); --pill-fg:hsla(194,100%,90%, 1);
 }
 /* Theme: light */
