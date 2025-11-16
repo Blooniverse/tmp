@@ -88,10 +88,11 @@ input[type=number], input[type=email], input[type=text], select {
 
 /* Totals */
 .totals-section {
-  background: hsla(0,0%,0%, 0.2);
-  border: 1px dotted var(--line);
+  background: hsla(0,0%,0%, 0.2);/* order: top   right   bottom   left */
+  border-width: 0.1rem 0.1rem 0.1rem 0.1rem;
   border-style: dotted solid double solid;
-  border-radius: .6rem;
+  border-color: var(--line);
+  border-radius: 0.6rem;
   padding: 0.5rem;
   margin: 1rem 0rem 1rem;
 }
