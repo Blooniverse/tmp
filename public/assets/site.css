@@ -21,7 +21,7 @@
 html,body{height:100%}
 
 body{
-  margin: 0;
+  margin: 0.2rem;
   font-family: system-ui, sans-serif;
   /* monospace, Consolas */
   font-weight: 400;
