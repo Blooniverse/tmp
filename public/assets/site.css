@@ -1,12 +1,12 @@
 /* Base themes */
 :root {
   --bg:hsla(202,80%,15%, 1); --fg:hsla(202,40%,95%, 1); --muted:hsla(202,10%,70%, 1); --brand:hsla(194,95%,70%, 1); --card:hsla(202,25%,10%, 1); --accent:hsla(194,100%,50%, 1);
-  --border:hsla(202,20%,15%, 1); --line:hsla(202,30%,20%, 1); --pill-bg:hsla(194,75%,20%); --pill-fg:hsla(194,100%,90%, 1);
+  --line:hsla(202,30%,20%, 1); --pill-bg:hsla(194,75%,20%); --pill-fg:hsla(194,100%,90%, 1);
 }
 /* Light theme variables */
 :root[data-theme="light"] {
   --bg:#f7f9fc; --fg:#0b1220; --muted:#5b6571; --brand:#0068b8; --card:#ffffff; --accent:#0066cc;
-  --border:#d9e1ea; --line:#cbd6e0; --pill-bg:#e6f4ff; --pill-fg:#003b73;
+  --line:#cbd6e0; --pill-bg:#e6f4ff; --pill-fg:#003b73;
 }
 /* Respect user preference by default */
 @media (prefers-color-scheme: light) {
@@ -49,8 +49,7 @@ main {
   box-shadow: 0 0 0.8rem 0.8rem hsla(0,0%,0%, 0.2), 0.3rem 0.3rem 0.3rem 0.05rem var(--pill-bg);
   padding: 1rem;
   border-radius: .6rem;
-  border: 1px solid #1c2330;
-  border-color: var(--border);
+  border: 1px dotted var(--line);
 }
 select#scenario, select#license, select# {
   background: color-mix(in srgb, var(--fg) 80%, transparent 20%);
@@ -122,7 +121,7 @@ fieldset legend::after {
   content: '▼';
   position: absolute;
   right: 0;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 fieldset.collapsed legend::after {
   transform: rotate(-90deg);
@@ -161,7 +160,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
 /* Hamburger + drawer */
 #menuBtn{position:absolute;top:1rem;right:1rem;background:transparent;border:1px solid var(--line);color:var(--fg);padding:.4rem .5rem;border-radius:.4rem;cursor:pointer}
 #menuBtn:focus{outline:2px solid var(--brand)}
-.drawer{position:fixed;inset:0 0 0 auto;width:280px;max-width:80vw;background:var(--card);border-left:1px solid var(--border);transform:translateX(100%);transition:transform .2s ease;z-index:40;display:flex;flex-direction:column}
+.drawer{position:fixed;inset:0 0 0 auto;width:280px;max-width:80vw;background:var(--card);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .2s ease;z-index:40;display:flex;flex-direction:column}
 .drawer.open{transform:translateX(0)}
 .menu{padding:1rem}
 .menu a{display:block;padding:.6rem 0}
