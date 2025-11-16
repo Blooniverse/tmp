@@ -71,7 +71,7 @@ input[type=range] {width:100%}
 input[type=number], input[type=email], input[type=text], select {
   width: 100%;
   padding: 0.45rem 0.5rem;
-  background: color-mix(in hsl, var(--bg) 80%, hsla(0,0%,0%, 1) 20%);
+  background: hsla(0,0%,0%, 0.2);
   color: var(--fg);
   border: 1px dotted var(--line); 
 }
@@ -88,7 +88,7 @@ input[type=number], input[type=email], input[type=text], select {
 
 /* Totals */
 .totals-section {
-  background: color-mix(in hsl, var(--bg) 80%, hsla(0,0%,0%, 1) 20%);
+  background: hsla(0,0%,0%, 0.2);
   border: 1px dotted #777777;
   border-radius: .6rem;
   padding: 0.5rem;
