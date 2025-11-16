@@ -50,8 +50,8 @@ main {
   border-radius: .6rem;
   border: 1px dotted var(--line);
 }
-select#scenario, select#license, select# {
-  background: color-mix(in srgb, var(--fg) 80%, transparent 20%);
+select#scenario, select#license {
+  background: color-mix(in srgb, var(--fg) 70%, transparent 30%);
   color: var(--bg);
   border-color: var(--line);
 }
