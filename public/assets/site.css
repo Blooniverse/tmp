@@ -45,8 +45,8 @@ a:hover{text-decoration:underline}
 main {
   background: hsla(0,0%,0%, 0.2);
   border-color: color-mix(in srgb, var(--brand) 35%, var(--line) 65%);
-  box-shadow: 0 6px 18px rgba(0,0,0, 0.25);
-  box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+  /* box-shadow: 0 6px 18px rgba(0,0,0, 0.25); */
+  box-shadow: 0 6px 6px 18px hsla(0,0%,0%, 0.25) initial, 0 6px 6px 4px green initial;
   padding: 1rem;
   border-radius: .6rem;
   border: 1px solid #1c2330;
