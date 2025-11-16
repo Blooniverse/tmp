@@ -51,7 +51,7 @@ main {
   border: 1px dotted var(--line);
 }
 select#scenario, select#license {
-  background: color-mix(in srgb, var(--fg) 70%, transparent 30%);
+  background: color-mix(in srgb, var(--fg) 60%, transparent 40%);
   color: var(--bg);
   border-color: var(--line);
 }
