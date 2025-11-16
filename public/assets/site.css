@@ -3,7 +3,7 @@
 /* Contrasts via Colorharmonygen.com  */
 :root {
   --bg:hsla(202,80%,15%, 1); --fg:hsla(202,40%,95%, 1); --muted:hsla(202,10%,70%, 1); --brand:hsla(194,95%,70%, 1); --card:hsla(322,35%,10%, 0.7); --accent:hsla(322,90%,30%, 0.5);
-  --line:hsla(202,50%,40%, 1); --pill-bg:hsla(194,75%,20%); --pill-fg:hsla(194,100%,90%, 1);
+  --line:hsla(202,50%,40%, 1); --pill-bg:hsla(194,75%,20%, 1); --pill-fg:hsla(194,100%,90%, 1);
 }
 /* Theme: light */
 :root[data-theme="light"] {
@@ -36,8 +36,8 @@ body{
 
 /* Layout */
 .container {max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
-header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 70%); padding-bottom: 1rem; }
-footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 80%); color:var(--muted); }
+header {background: linear-gradient(180deg, color-mix(in hsl, var(--brand) 30%, transparent 70%), transparent 70%); padding-bottom: 1rem; }
+footer {background: linear-gradient(000deg, color-mix(in hsl, var(--brand) 20%, transparent 80%), transparent 80%); color:var(--muted); }
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:.85rem;margin-bottom:1rem; margin-right:-0.5rem;}
 
 h1{margin:0 0 0.5rem; font-size:2rem}
@@ -71,7 +71,7 @@ input[type=range] {width:100%}
 input[type=number], input[type=email], input[type=text], select {
   width: 100%;
   padding: 0.45rem 0.5rem;
-  background: color-mix(in srgb, var(--bg) 80%, #000000 20%);
+  background: color-mix(in hsl, var(--bg) 80%, hsla(0,0%,0%, 1) 20%);
   color: var(--fg);
   border: 1px dotted var(--line); 
 }
@@ -131,7 +131,7 @@ fieldset.collapsed > :not(legend) {
 }
 fieldset.service-accordion {
   background: linear-gradient(180deg,color-mix(in srgb,var(--brand) 30%,transparent 70%),transparent 70%);
-  border-color: color-mix(in hsl,var(--brand) 35%,var(--line) 65%);
+  border-color: color-mix(in hsl, var(--brand) 35%, var(--line) 65%);
   box-shadow:0 6px 18px rgba(0,0,0,0.25);
 }
 label.inline{display:flex;align-items:center;gap:.5rem}
