@@ -21,7 +21,7 @@
 html,body{height:100%}
 
 body{
-  margin: 0.2rem;
+  margin: 0;
   font-family: system-ui, sans-serif;
   /* monospace, Consolas */
   font-weight: 400;
@@ -33,12 +33,12 @@ body{
 }
 
 /* Layout */
-.container {max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.container {max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
 header {background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 30%, transparent 70%), transparent 80%); padding: 0.7rem 0 1rem; }
 footer {background: linear-gradient(000deg, color-mix(in srgb, var(--brand) 20%, transparent 80%), transparent 60%); padding: 0.7rem 0 0.7rem; font-size:.95rem; color:var(--muted); }
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:.85rem;margin-bottom:1rem}
-h1{margin:0 0 .5rem;font-size:2rem}
-h2{margin:.25rem 0 0;font-weight:500;color:var(--muted)}
+h1{margin:0 0 0.5rem; font-size:2rem}
+h2{margin:0.25rem 0 0; font-weight:500; color:var(--muted)}
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 
