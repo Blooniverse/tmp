@@ -46,7 +46,7 @@ main {
   background: hsla(0,0%,0%, 0.2);
   border-color: color-mix(in srgb, var(--brand) 35%, var(--line) 65%);
   /* box-shadow: 0 6px 18px rgba(0,0,0, 0.25); */
-  box-shadow: 0 6px 6px 18px hsla(0,0%,0%, 0.25) initial, 0 6px 6px 4px green initial;
+  box-shadow: 0 0 1rem 1rem hsla(0,0%,0%, 0.35), 0.5rem 0.5rem 0.5rem 0.1rem green;
   padding: 1rem;
   border-radius: .6rem;
   border: 1px solid #1c2330;
