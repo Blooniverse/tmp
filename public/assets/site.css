@@ -45,7 +45,7 @@ a:hover{text-decoration:underline}
 main {
   background: hsla(0,0%,0%, 0.2);
   border-color: color-mix(in srgb, var(--brand) 35%, var(--line) 65%);
-  box-shadow: 0 0 0.8rem 0.6rem var(--pill-bg), 0.6rem 0.6rem 1rem 2rem hsla(0,0%,0%, 0.3);
+  box-shadow: 0 0 0.8rem 0.6rem var(--pill-bg), 0.6rem 0.6rem 2rem 1rem hsla(0,0%,0%, 0.3);
   padding: 1rem;
   border-radius: .6rem;
   border: 1px dotted var(--line);
