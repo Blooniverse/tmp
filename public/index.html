@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/...">
+<html lang="de" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/[...]">
 <head>
 
 <meta charset="utf-8">
-<title>365cloud.ai&thinsp;→ Engineering für Microsoft 365, Power Platform & Azure</title>
-<meta name="description" content="365cloud.ai&thinsp;→ Engineering für Microsoft 365, Power Platform & Azure für die Digitale Transformation. Kostenschätzer inklusive!">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="365cloud.ai → Engineering für Microsoft 365, Power Platform & Azure für die Digitale Transformation. Kostenschätzer inklusive!">
 <meta name="keywords" content="m365, microsoft 365, power platform, azure cloud, ai, ki, engineering, administration, digital transformation">
 <meta name="robots" content="index, follow, noarchive, notranslate">
 <meta name="referrer" content="no-referrer-when-downgrade">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>365cloud.ai → Engineering für Microsoft 365, Power Platform & Azure</title>
 
 <link rel="canonical" href="https://365cloud.ai/" />
 <link rel="alternate" hreflang="de" href="https://365cloud.ai/" />
@@ -77,63 +78,70 @@
   
 <header>
   <div class="container">
-    <button id="menuBtn" aria-controls="drawer" aria-expanded="false" aria-label="Menü öffnen">☰</button>
-    <span class="pill">Business Engineering 365° Digital Transformations</span>
+    <button id="menuBtn" aria-controls="drawer" aria-expanded="false" aria-label="Navigationsmenü öffnen">☰</button>
+    <span class="pill" aria-label="Unternehmensmotto">Business Engineering 365° Digital Transformations</span>
     <h1>365cloud.ai</h1>
     <h2>Engineering für Microsoft 365, Power Platform & Azure</h2>
   </div>
 </header>
 
-<div id="scrim" class="scrim" hidden></div>
-<aside id="drawer" class="drawer" aria-hidden="true" aria-label="Seitenmenü">
-  <nav class="menu" role="navigation">
+<div id="scrim" class="scrim" hidden aria-hidden="true"></div>
+<aside id="drawer" class="drawer" aria-hidden="true" aria-label="Navigationsmenü">
+  <nav class="menu" role="navigation" aria-label="Hauptnavigation">
     <a href="/">Startseite</a>
     <a href="/de/project-power/">Projekt Power</a>
     <a href="/de/blog/">Blog</a>
     <a href="/de/imprint/">Impressum</a>
-    <hr class="hr-divider" />
-    <label class="switch"><input id="themeToggle" type="checkbox"/> Helles Design</label>
-    <div class="lang-block">
-      <strong>Sprache</strong>
-      <div class="lang-switch">
-        <button data-lang="de" class="lang-btn">DE</button>
-        <button data-lang="en" class="lang-btn">EN</button>
-      </div>
+    <hr class="hr-divider" aria-hidden="true" />
+    <div class="control-group">
+      <label for="themeToggle" class="switch">
+        <input id="themeToggle" type="checkbox" aria-label="Design-Modus wechseln (Hell/Dunkel)" />
+        <span class="switch-label">Helles Design</span>
+      </label>
     </div>
+    <fieldset class="lang-block">
+      <legend>Sprache</legend>
+      <div class="lang-switch" role="group" aria-label="Sprachauswahl">
+        <button type="button" data-lang="de" class="lang-btn" aria-label="Sprache wechseln zu Deutsch">DE</button>
+        <button type="button" data-lang="en" class="lang-btn" aria-label="Sprache wechseln zu Englisch">EN</button>
+      </div>
+    </fieldset>
   </nav>
 </aside>
 
-<main class="container">
-  <section>
-    <h3 class="h3-tight">Kostenschätzer</h3>
+<main class="container" role="main" aria-label="Kostenschätzer für Engineering Services">
+  <section aria-labelledby="calculator-title">
+    <h3 id="calculator-title" class="h3-tight">Kostenschätzer</h3>
     <div class="calc">
       <div class="grid-3">
         <div class="row">
           <label for="scenario">Szenarios</label>
-          <select id="scenario">
+          <select id="scenario" aria-describedby="scenarioNote">
             <option value="microsoft_m365" selected>M365-Fokus (Produktivität)</option>
             <option value="microsoft_powerplatform">Powerplatform-Fokus (Citizen Developer)</option>
             <option value="microsoft_azure">Azure-Fokus (Cloud & AI)</option>
           </select>
-          <p class="note" id="scenarioNote"></p>
+          <p class="note" id="scenarioNote" role="status" aria-live="polite"></p>
         </div>
         <div class="row">
-          <label for="people">User: <strong><span id="peopleLabel">1</span></strong></label>
-          <input id="people" type="range" min="1" max="100" value="1" />
+          <label for="people">Benutzer: <strong><span id="peopleLabel">1</span></strong></label>
+          <input id="people" type="range" min="1" max="100" value="1" aria-valuetext="1 Benutzer" aria-describedby="peopleDesc" />
+          <small id="peopleDesc" class="note">Schieber zum Einstellen der Benutzeranzahl</small>
         </div>
         <div class="row">
           <label for="license">M365-Lizenz</label>
-          <select id="license">
+          <select id="license" aria-describedby="licenseNote">
             <option value="microsoft365_license_bp">Microsoft 365 BP — CHF 23</option>
             <option value="microsoft365_license_e3" selected>Microsoft 365 E3 — CHF 36</option>
             <option value="microsoft365_license_e5">Microsoft 365 E5 — CHF 57</option>
           </select>
+          <small id="licenseNote" class="note">Monatliche Kosten pro Benutzer</small>
         </div>
       </div>
 
-      <div class="totals-section">
-        <div class="total-item">Total Services (einmalig): <span id="onetimeTotal"></span></div>
-        <div class="total-item">Total Services (jährlich): <span id="totalYearly"></span></div>
+      <div class="totals-section" role="region" aria-label="Kostenzusammenfassung">
+        <div class="total-item">Total Services (einmalig): <span id="onetimeTotal" aria-live="polite">-</span></div>
+        <div class="total-item">Total Services (jährlich): <span id="totalYearly" aria-live="polite">-</span></div>
       </div>
         
 
@@ -141,25 +149,40 @@
         <legend>Services (einmalig)</legend>
         <div class="grid-2">
           <div class="row">
-            <label class="inline"><input type="checkbox" id="on_tenant_chk" checked> M365 Secure Foundations</label>
-            <input id="on_tenant" type="number" step="0.01" value="4500.00" readonly />
+            <label class="inline" for="on_tenant_chk">
+              <input type="checkbox" id="on_tenant_chk" checked aria-describedby="on_tenant_desc" />
+              M365 Secure Foundations
+            </label>
+            <input id="on_tenant" type="number" step="0.01" value="4500.00" readonly aria-readonly="true" />
+            <small id="on_tenant_desc" class="note">Einmalige Konfiguration der M365-Sicherheitsgrundlagen</small>
           </div>
           <div class="row">
-            <label class="inline"><input type="checkbox" id="on_lz_chk"> Azure Landing Zone & IaC</label>
-            <input id="on_lz" type="number" step="0.01" value="6500.00" readonly disabled />
+            <label class="inline" for="on_lz_chk">
+              <input type="checkbox" id="on_lz_chk" aria-describedby="on_lz_desc" />
+              Azure Landing Zone & IaC
+            </label>
+            <input id="on_lz" type="number" step="0.01" value="6500.00" readonly aria-readonly="true" disabled />
+            <small id="on_lz_desc" class="note">Infrastructure-as-Code Aufbau</small>
           </div>
         </div>
         <div class="grid-2">
           <div class="row">
-            <label class="inline"><input type="checkbox" id="on_coe_chk"> Power Platform CoE</label>
-            <input id="on_coe" type="number" step="0.01" value="4000.00" readonly disabled />
+            <label class="inline" for="on_coe_chk">
+              <input type="checkbox" id="on_coe_chk" aria-describedby="on_coe_desc" />
+              Power Platform CoE
+            </label>
+            <input id="on_coe" type="number" step="0.01" value="4000.00" readonly aria-readonly="true" disabled />
+            <small id="on_coe_desc" class="note">Center of Excellence Einrichtung</small>
           </div>
           <div class="row">
-            <label class="inline"><input type="checkbox" id="on_adopt_chk"> Adoption & Training</label>
-            <input id="on_adopt" type="number" step="0.01" value="3000.00" readonly disabled />
+            <label class="inline" for="on_adopt_chk">
+              <input type="checkbox" id="on_adopt_chk" aria-describedby="on_adopt_desc" />
+              Adoption & Training
+            </label>
+            <input id="on_adopt" type="number" step="0.01" value="3000.00" readonly aria-readonly="true" disabled />
+            <small id="on_adopt_desc" class="note">Schulung und Change Management</small>
           </div>
         </div>
-        <p class="note">Note ...</p>
       </fieldset>
 
       <fieldset class="service-accordion">
@@ -167,61 +190,76 @@
         <div class="grid-2">
           <div class="row">
             <label for="m365">M365-Lizenzkosten</label>
-            <input id="m365" type="number" step="0.01" value="36.00" readonly />
+            <input id="m365" type="number" step="0.01" value="36.00" readonly aria-readonly="true" aria-describedby="m365_note" />
+            <small id="m365_note" class="note">Kosten pro Benutzer und Monat</small>
           </div>
           <div class="row">
             <label for="azAll">Azure-Services</label>
-            <input id="azAll" type="number" step="0.01" value="28.00" readonly />
+            <input id="azAll" type="number" step="0.01" value="28.00" readonly aria-readonly="true" aria-describedby="azAll_note" />
+            <small id="azAll_note" class="note">Geschätzte monatliche Kosten</small>
           </div>
         </div>
-        <p class="note">Kosten pro Benutzer und Monat.</p>
       </fieldset>
 
       <fieldset class="service-accordion">
         <legend>Service-Optionen</legend>
         <div class="grid-3">
           <div class="row">
-            <label class="inline"><input type="checkbox" id="co365_chk" checked> Copilot für Microsoft 365</label>
-            <input id="co365" type="number" step="0.01" value="30.00" readonly />
+            <label class="inline" for="co365_chk">
+              <input type="checkbox" id="co365_chk" checked aria-describedby="co365_desc" />
+              Copilot für Microsoft 365
+            </label>
+            <input id="co365" type="number" step="0.01" value="30.00" readonly aria-readonly="true" />
+            <small id="co365_desc" class="note">Pro Benutzer und Monat</small>
           </div>
           <div class="row">
-            <label class="inline"><input type="checkbox" id="pp_chk"> Power Platform Premium</label>
-            <input id="pp" type="number" step="0.01" value="18.00" readonly disabled />
+            <label class="inline" for="pp_chk">
+              <input type="checkbox" id="pp_chk" aria-describedby="pp_desc" />
+              Power Platform Premium
+            </label>
+            <input id="pp" type="number" step="0.01" value="18.00" readonly aria-readonly="true" disabled />
+            <small id="pp_desc" class="note">Pro Benutzer und Monat</small>
           </div>
           <div class="row">
-            <label class="inline"><input type="checkbox" id="aoai_chk"> Azure OpenAI</label>
-            <input id="aoai" type="number" step="0.01" value="10.00" readonly disabled />
+            <label class="inline" for="aoai_chk">
+              <input type="checkbox" id="aoai_chk" aria-describedby="aoai_desc" />
+              Azure OpenAI
+            </label>
+            <input id="aoai" type="number" step="0.01" value="10.00" readonly aria-readonly="true" disabled />
+            <small id="aoai_desc" class="note">Pro Benutzer und Monat</small>
           </div>
         </div>
-        <p class="note">Kosten pro Benutzer und Monat.</p>
       </fieldset>
 
       <div class="out" id="out">
         <div class="actions">
-          <button id="copyLink">Konfiguration teilen</button>
-          <button secondary" id="askQuote">Angebot anfordern</button>
-          <span class="toast" id="toast" role="status" aria-live="polite"></span>
+          <button id="copyLink" type="button">Konfiguration teilen</button>
+          <button id="askQuote" type="button" secondary>Angebot anfordern</button>
+          <span class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></span>
         </div>
 
-        <div id="quotePanel">
-          <form id="quoteForm">
-            <div class="form-grid">
-              <div class="row">
-                <label for="q_first">Vorname</label>
-                <input type="text" id="q_first" required />
+        <div id="quotePanel" hidden aria-hidden="true">
+          <form id="quoteForm" novalidate>
+            <fieldset>
+              <legend>Angebots-Anfrage</legend>
+              <div class="form-grid">
+                <div class="row">
+                  <label for="q_first">Vorname <span aria-label="erforderlich">*</span></label>
+                  <input type="text" id="q_first" required aria-required="true" />
+                </div>
+                <div class="row">
+                  <label for="q_last">Nachname <span aria-label="erforderlich">*</span></label>
+                  <input type="text" id="q_last" required aria-required="true" />
+                </div>
+                <div class="row">
+                  <label for="q_email">Email <span aria-label="erforderlich">*</span></label>
+                  <input type="email" id="q_email" required aria-required="true" />
+                </div>
               </div>
-              <div class="row">
-                <label for="q_last">Nachname</label>
-                <input type="text" id="q_last" required />
+              <div class="form-actions">
+                <button type="submit">Anfrage absenden (via E-Mail)</button>
               </div>
-              <div class="row">
-                <label for="q_email">Email</label>
-                <input type="email" id="q_email" required />
-              </div>
-            </div>
-            <div class="form-actions">
-              <button type="submit">Anfrage absenden (via E-Mail)</button>
-            </div>
+            </fieldset>
           </form>
         </div>
       </div>
@@ -231,11 +269,11 @@
   </section>
 </main>
 
-<aside class="container aside-padding">
+<aside class="container aside-padding" role="complementary" aria-label="Rechtlicher Hinweis">
   <p class="note">Hinweis: Produktnamen werden nur beschreibend erwähnt; 365cloud.ai ist unabhängig und nicht mit Microsoft verbunden.</p>
 </aside>
 
-<footer>
+<footer role="contentinfo">
   <div class="container">
     <span>© 2025 365cloud.ai — Unabhängige Beratung für Microsoft 365, Power Platform, Azure Cloud & Azure AI.</span>
     &nbsp;|&nbsp; <a href="/de/imprint/">Impressum</a>
