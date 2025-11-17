@@ -94,13 +94,13 @@ h1, p.h1-page {
   font-size: 2rem;
   font-weight: 800;
   font-variant: small-caps;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
 }
 h2, p.h2-page {
   /* Box Model */
   margin: 0.25rem 0 0;
   /* Typography */
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 600;
   font-variant: small-caps;
   color: var(--muted);
