@@ -525,7 +525,7 @@ label.inline input[type=checkbox] {
   /* Box Model */
   border: 1px solid var(--line);
   border-radius: .4rem;
-  padding: .4rem .5rem;
+  padding: 1rem;
   /* Typography */
   color: var(--fg);
   /* Visual */
@@ -539,7 +539,7 @@ label.inline input[type=checkbox] {
   /* Box Model */
   border: 1px solid var(--line);
   margin-bottom: 0.5rem;
-  padding: 0.4rem 0.5rem;
+  padding: 1rem;
   /* Typography */
   color: var(--fg);
   text-align: right;
