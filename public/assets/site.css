@@ -517,7 +517,7 @@ label.inline input[type=checkbox] {
 }
 
 /* --- Hamburger Menu & Drawer --- */
-#menuBtn {
+button#menuBtn {
   /* Position */
   position: absolute;
   right: 1rem;
@@ -532,13 +532,13 @@ label.inline input[type=checkbox] {
   background: transparent;
   cursor: pointer;
 }
-#closeDrawer {
+button#closeDrawer {
   /* Layout */
   display: block;
   width: 100%;
   /* Box Model */
   border: 1px solid var(--line);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   padding: 1rem;
   /* Typography */
   color: var(--fg);
@@ -546,15 +546,14 @@ label.inline input[type=checkbox] {
   /* Visual */
   background: transparent;
 }
-.drawer {
+aside.drawer {
   /* Position */
   inset: 0 0 0 auto;
   position: fixed;
   z-index: 40;
   /* Box Model */
   border-left: 1px solid var(--line);
-  max-width: 80vw;
-  padding: 1rem;
+  max-width: 60vw;
   width: 280px;
   /* Visual */
   background: var(--card);
@@ -570,7 +569,7 @@ label.inline input[type=checkbox] {
 }
 .menu {
   /* Box Model */
-  padding: 1rem;
+  padding: 0.8rem;
 }
 .menu a {
   /* Layout */
