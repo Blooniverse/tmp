@@ -45,6 +45,7 @@ h2{margin:0.25rem 0 0; font-weight:600; color:var(--muted)}
 h3.h3-tight { margin: 0rem 0rem 0.6rem; }
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:2px}
 
 main {
   background: hsla(0,0%,0%, 0.2);
@@ -68,12 +69,24 @@ select#scenario, select#license, select > option {
 .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; }
 label{color:#cbd6e0;color:var(--muted)}
 input[type=range] {width:100%}
+input[type=range]:focus-visible { 
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 input[type=number], input[type=email], input[type=text], select {
   width: 100%;
   padding: 0.45rem 0.5rem;
   background: hsla(0,0%,0%, 0.2);
   color: var(--fg);
-  border: 1px dotted var(--line); 
+  border: 1px dotted var(--line);
+}
+input[type=number]:focus-visible,
+input[type=email]:focus-visible,
+input[type=text]:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-color: var(--brand);
 }
 .out {
   border: 1px dotted var(--line);
@@ -137,6 +150,10 @@ fieldset.service-accordion {
 }
 label.inline{display:flex;align-items:center;gap:.5rem}
 label.inline input[type=checkbox]{transform:scale(1.3)}
+label.inline input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 
 /* Quote panel */
 #quotePanel{margin-top:1rem;max-height:0;overflow:hidden;transition:max-height 0.3s ease}
@@ -146,6 +163,41 @@ label.inline input[type=checkbox]{transform:scale(1.3)}
 form#quoteForm * input {
   background: color-mix(in hsl, var(--accent) 30%, transparent 100%);
 }
+form#quoteForm input:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Error message styling */
+.error-message {
+  display: none;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.error-message:not(:empty) {
+  display: block;
+}
+
+/* Form message styling */
+.form-message {
+  display: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+}
+.form-message:not(:empty) {
+  display: block;
+}
+.form-message.success {
+  background-color: #51cf66;
+  color: #1a4620;
+}
+.form-message.error {
+  background-color: #ff6b6b;
+  color: #5c0a0a;
+}
 
 /* Toast notification */
 #toast{position:fixed;bottom:2rem;right:2rem;padding:1rem;background:#333;color:#fff;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:50;transition:opacity 0.3s ease}
@@ -154,27 +206,80 @@ form#quoteForm * input {
 /* Toggle label styling */
 .toggle-label{display:flex;align-items:center;gap:.5rem}
 .toggle-label input[type=checkbox]{width:auto}
+.toggle-label input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 .toggle-label input[type=number]{width:80px;margin:0 .25rem}
+.toggle-label input[type=number]:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 
 /* Button styling */
 button{background:var(--pill-bg);color:var(--pill-fg);border:1px solid var(--pill-bg);padding:.6rem 1rem;border-radius:.4rem;cursor:pointer; font-size:1rem; }
 button:hover{opacity:0.9}
+button:focus-visible{
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 button:disabled{opacity:.6;cursor:not-allowed}
 button#askQuote, button[type=submit] {background: var(--accent); }
 
 /* Hamburger + drawer */
 #menuBtn{position:absolute;top:1rem;right:1rem;background:transparent;border:1px solid var(--line);color:var(--fg);padding:.4rem .5rem;border-radius:.4rem;cursor:pointer}
-#menuBtn:focus{outline:2px solid var(--brand)}
-.drawer{position:fixed;inset:0 0 0 auto;width:280px;max-width:80vw;background:var(--card);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .2s ease;z-index:40;display:flex;flex-direction:column}
+#menuBtn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+#closeDrawer {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--fg);
+  padding: 0.4rem 0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+#closeDrawer:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+.drawer{position:fixed;inset:0 0 0 auto;width:280px;max-width:80vw;background:var(--card);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .2s ease;z-index:40;overflow-y:auto}
 .drawer.open{transform:translateX(0)}
 .menu{padding:1rem}
 .menu a{display:block;padding:.6rem 0}
+.menu a:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  text-decoration: underline;
+}
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.4);backdrop-filter:saturate(120%) blur(1px);opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:30}
 .scrim.open{opacity:1;pointer-events:auto}
 
 /* Theme toggle */
 .switch{display:flex;align-items:center;gap:.5rem;padding:.25rem 0}
 .switch input[type=checkbox]{width:1.25rem;height:1.25rem}
+.switch input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Language buttons */
+.lang-btn {
+  padding: 0.5rem 0.75rem;
+  margin: 0.25rem;
+  background: var(--pill-bg);
+  color: var(--pill-fg);
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.lang-btn:hover {
+  opacity: 0.9;
+}
+.lang-btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
 
 /* Utility */
 .hr-divider {
@@ -186,3 +291,21 @@ button#askQuote, button[type=submit] {background: var(--accent); }
 .actions-row { margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .actions-row .btn { flex: 1; min-width: 200px; }
 .lang-block { margin-top: .5rem; }
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible polyfill support */
+:focus {
+  outline: none;
+}
