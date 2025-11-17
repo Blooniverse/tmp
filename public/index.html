@@ -4,8 +4,8 @@
 
 <meta charset="utf-8">
 <title>365CLOUD.AI → ENGINEERING FÜR MICROSOFT 365, POWER PLATFORM & AZURE</title>
-<meta name="description" content="365cloud.ai → Engineering für Microsoft 365, Power Platform & Azure für die Digitale Transformation. Kostenschätzer inklusive!">
-<meta name="keywords" content="m365, microsoft 365, power platform, azure cloud, ai, ki, engineering, administration, digital transformation">
+<meta name="description" content="365cloud.ai → Business Engineering für Microsoft 365, Power Platform & Azure für die digitale Transformation. Kostenschätzer inklusive!">
+<meta name="keywords" content="m365, microsoft 365, power platform, azure cloud, ai, ki, business engineering, industrial, administration, digital transformation">
 <meta name="robots" content="index, follow, noarchive, notranslate">
 <meta name="referrer" content="no-referrer-when-downgrade">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,53 +22,96 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://365cloud.ai/#organization",
+      "name": "365CLOUD.AI",
+      "url": "https://365cloud.ai/",
+      "description": "365cloud.ai → Business Engineering für Microsoft 365, Power Platform & Azure für die digitale Transformation. Kostenschätzer inklusive!",
+      "founder": {
+        "@type": "Person",
+        "name": "Philipp Schaffner",
+        "url": "https://philipp-schaffner.com"
+      },
+      "knowsAbout": [
+        "Microsoft 365",
+        "Microsoft Power Platform",
+        "Microsoft Azure",
+        "Cybernetic Engineering",
+        "Digital Transformation"
+      ]
+    },
+    {
       "@type": "WebSite",
       "@id": "https://365cloud.ai/#website",
       "url": "https://365cloud.ai/",
       "name": "365CLOUD.AI",
-      "description": "365cloud.ai → Engineering für Microsoft 365, Power Platform & Azure für die Digitale Transformation. Kostenschätzer inklusive!",
+      "description": "365cloud.ai → Business Engineering für Microsoft 365, Power Platform & Azure für die digitale Transformation. Kostenschätzer inklusive!",
       "publisher": {
-        "@type": "Organization",
-        "name": "365cloud.ai",
-        "url": "https://365cloud.ai/"
+        "@id": "https://365cloud.ai/#organization"
       },
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://365cloud.ai/blog/?q={search_term_string}",
         "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://365cloud.ai/#service",
+      "serviceType": "IT Consulting",
+      "provider": {
+        "@id": "https://365cloud.ai/#organization"
       },
-      "hasPart": [
-        {
-          "@type": "CollectionPage",
-          "name": "Blog",
-          "url": "https://365cloud.ai/de/blog/"
-        },
-        {
-          "@type": "WebPage",
-          "name": "Projekt Power",
-          "url": "https://365cloud.ai/de/project-power/"
-        },
-        {
-          "@type": "WebPage",
-          "name": "Impressum",
-          "url": "https://365cloud.ai/de/imprint/"
-        }
-      ]
+      "name": "Engineering für Microsoft 365, Power Platform & Azure",
+      "description": "Professionelles Engineering und Beratung zur Förderung der digitalen Transformation mit Microsoft 365, Power Platform und Azure Cloud-Technologien.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "CH"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cloud Engineering Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "M365 Secure Foundations"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Azure Landing Zone & IaC"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Power Platform CoE"
+            }
+          }
+        ]
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://365cloud.ai/#homepage",
       "url": "https://365cloud.ai/",
-      "name": "365cloud.ai → Engineering für Microsoft 365, Power Platform & Azure",
-      "description": "365cloud.ai → Engineering für Microsoft 365, Power Platform & Azure für die Digitale Transformation. Kostenschätzer inklusive!",
+      "name": "365CLOUD.AI → ENGINEERING FÜR MICROSOFT 365, POWER PLATFORM & AZURE",
+      "description": "365cloud.ai → Business Engineering für Microsoft 365, Power Platform & Azure für die digitale Transformation. Kostenschätzer inklusive!",
       "inLanguage": "de",
       "isPartOf": {
         "@id": "https://365cloud.ai/#website"
-      }
+      },
+      "mainEntity": {
+        "@id": "https://365cloud.ai/#service"
+      },
     }
   ]
-}
-</script>
+}</script>
 </head>
 
 
