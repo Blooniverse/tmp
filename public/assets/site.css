@@ -106,10 +106,13 @@ h3.h3-tight {
   /* Box Model */
   margin: 0 0 0.6rem;
 }
-a:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a) {
+a {
   /* Typography */
   color: var(--brand);
   text-decoration: none;
+}
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+    color: var(--fg);
 }
 a:hover {
   /* Typography */
